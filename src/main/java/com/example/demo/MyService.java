@@ -1,7 +1,9 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -10,7 +12,11 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 @Service
+@Component
 public class MyService {
+    @Autowired
+    private Integer min;
+    private Integer max;
 
     public String getZoo() {
         List<String> animals = new ArrayList<>();
@@ -19,11 +25,7 @@ public class MyService {
         return animals.toString();
     }
 
-    public ResponseEntity<RandomNumber> getRandomNumber(Integer min, Integer max) {
-        if (min < 0) {
-            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
-        }
-        RandomNumber number = new RandomNumber(min, max, ThreadLocalRandom.current().nextInt(min, max));
-        return new ResponseEntity<>(number, HttpStatus.OK);
+    public RandomNumber getRandomNumber() {
+        return new RandomNumber(min, max, ThreadLocalRandom.current().nextInt(min, max));
     }
 }
