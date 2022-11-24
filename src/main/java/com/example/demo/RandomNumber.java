@@ -1,11 +1,13 @@
 package com.example.demo;
 
+import java.util.stream.IntStream;
+
 public class RandomNumber {
     int min;
     int max;
-    int result;
+    IntStream result;
 
-    public RandomNumber(int min, int max, int result) {
+    public RandomNumber(int min, int max, IntStream result) {
         this.min = min;
         this.max = max;
         this.result = result;
@@ -27,11 +29,11 @@ public class RandomNumber {
         this.max = max;
     }
 
-    public int getResult() {
+    public IntStream getResult() {
         return result;
     }
 
-    public void setResult(int result) {
+    public void setResult(IntStream result) {
         this.result = result;
     }
 }
