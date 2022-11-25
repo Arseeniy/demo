@@ -26,6 +26,8 @@ public class RequestHistoryEntity {
 
     @Column(name = "date")
     private Date date;
+    @Column(name = "result")
+    private Integer result;
 
     public Integer getId() {
         return id;
@@ -65,5 +67,13 @@ public class RequestHistoryEntity {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public Integer getResult() {
+        return result;
+    }
+
+    public void setResult(Integer result) {
+        this.result = result;
     }
 }

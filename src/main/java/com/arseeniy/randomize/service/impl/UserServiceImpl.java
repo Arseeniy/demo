@@ -1,7 +1,8 @@
-package com.arseeniy.randomize.service;
+package com.arseeniy.randomize.service.impl;
 
 import com.arseeniy.randomize.common.RequestHistoryEntity;
 import com.arseeniy.randomize.repository.UserRepository;
+import com.arseeniy.randomize.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
