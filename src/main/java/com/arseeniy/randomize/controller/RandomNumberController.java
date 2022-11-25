@@ -20,30 +20,17 @@ public class RandomNumberController {
     private UserServiceImpl userService;
 
     @GetMapping("/get/random/{min}/{max}/{name}")
-//    public ResponseEntity getRandomNumber(@PathVariable Integer min, @PathVariable Integer max,
-//                                                        @PathVariable String name) {
-//        if (min < 0) {
-//            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("\"min\" - value is negative.");
-//        }
-//        RequestHistoryEntity currentRequestHistoryEntity = new RequestHistoryEntity();
-//        currentRequestHistoryEntity.setMin(min);
-//        currentRequestHistoryEntity.setMax(max);
-//        currentRequestHistoryEntity.setName(name);
-//        currentRequestHistoryEntity.setDate(new Date());
-//        userService.addUser(currentRequestHistoryEntity);
-//        return ResponseEntity.status(HttpStatus.OK).body(randomNumberServiceImpl.getRandomNumber(min, max));
-//    }
-    public ResponseEntity<RandomNumber> getRandomNumber(@PathVariable Integer min, @PathVariable Integer max,
+    public ResponseEntity getRandomNumber(@PathVariable Integer min, @PathVariable Integer max,
                                                         @PathVariable String name) {
         if (min < 0) {
-            return new ResponseEntity<>(HttpStatus.NOT_ACCEPTABLE);
+            return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("\"min\" - value is negative.");
         }
-        RequestHistoryEntity currentUser = new RequestHistoryEntity();
-        currentUser.setMin(min);
-        currentUser.setMax(max);
-        currentUser.setName(name);
-        currentUser.setDate(new Date());
-        userService.addUser(currentUser);
-        return new ResponseEntity<>(randomNumberServiceImpl.getRandomNumber(min, max), HttpStatus.OK);
+        RequestHistoryEntity currentRequestHistoryEntity = new RequestHistoryEntity();
+        currentRequestHistoryEntity.setMin(min);
+        currentRequestHistoryEntity.setMax(max);
+        currentRequestHistoryEntity.setName(name);
+        currentRequestHistoryEntity.setDate(new Date());
+        userService.addUser(currentRequestHistoryEntity);
+        return ResponseEntity.status(HttpStatus.OK).body(randomNumberServiceImpl.getRandomNumber(min, max));
     }
 }
