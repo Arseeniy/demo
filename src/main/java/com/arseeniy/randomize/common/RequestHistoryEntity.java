@@ -1,12 +1,12 @@
-package com.example.demo;
+package com.arseeniy.randomize.common;
 
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "randomtable")
-public class User {
+@Table(name = "request_history")
+public class RequestHistoryEntity {
 
     @Id
     @Column(name = "id")
@@ -26,14 +26,6 @@ public class User {
 
     @Column(name = "date")
     private Date date;
-
-//    public User(Integer id, Integer min, Integer max, String name, Date date) {
-//        this.id = id;
-//        this.min = min;
-//        this.max = max;
-//        this.name = name;
-//        this.date = date;
-//    }
 
     public Integer getId() {
         return id;

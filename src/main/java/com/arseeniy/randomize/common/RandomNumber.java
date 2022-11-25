@@ -1,13 +1,11 @@
-package com.example.demo;
-
-import java.util.stream.IntStream;
+package com.arseeniy.randomize.common;
 
 public class RandomNumber {
     int min;
     int max;
-    IntStream result;
+    int result;
 
-    public RandomNumber(int min, int max, IntStream result) {
+    public RandomNumber(int min, int max, int result) {
         this.min = min;
         this.max = max;
         this.result = result;
@@ -29,11 +27,11 @@ public class RandomNumber {
         this.max = max;
     }
 
-    public IntStream getResult() {
+    public int getResult() {
         return result;
     }
 
-    public void setResult(IntStream result) {
+    public void setResult(int result) {
         this.result = result;
     }
 }
