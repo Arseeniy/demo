@@ -10,7 +10,6 @@ public class RequestHistoryEntity {
 
     @Id
     @Column(name = "id")
-    //@GeneratedValue(strategy = GenerationType.AUTO)
     @SequenceGenerator(name = "usersIdSeq", sequenceName = "users_id_seq", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "usersIdSeq")
     private Integer id;

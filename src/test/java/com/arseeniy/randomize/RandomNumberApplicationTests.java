@@ -1,4 +1,4 @@
-package Common;
+package com.arseeniy.randomize;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
