@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.arseeniy.randomize.common;
 
 public class RandomNumber {
     int min;
