@@ -1,7 +1,6 @@
 package com.arseeniy.randomize.controller;
 
 import com.arseeniy.randomize.common.RandomNumber;
-import com.arseeniy.randomize.common.RequestHistoryEntity;
 import com.arseeniy.randomize.service.RandomNumberService;
 import com.arseeniy.randomize.service.RequestHistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 
 
 @RestController
