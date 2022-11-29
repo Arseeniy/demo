@@ -16,6 +16,7 @@ public class RandomNumberController {
     private RandomNumberService randomNumberService;
     @Autowired
     private RequestHistoryService requestHistoryService;
+    //changes for second_test_branch
 
     @GetMapping("/get/random/{min}/{max}/{name}")
     public ResponseEntity getRandomNumber(@PathVariable Integer min, @PathVariable Integer max,
