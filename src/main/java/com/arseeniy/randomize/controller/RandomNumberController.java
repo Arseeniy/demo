@@ -12,17 +12,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class RandomNumberController {
-
-    private String  conflict = "123";
     @Autowired
     private RandomNumberService randomNumberService;
     @Autowired
     private RequestHistoryService requestHistoryService;
     //КОНФЛИКТ 123123
     //КОНФЛИКТ 123123
-    private void changeConflictVar(String tmp){
-        this.conflict = tmp;
-    }
 
     @GetMapping("/get/random/{min}/{max}/{name}")
     public ResponseEntity getRandomNumber(@PathVariable Integer min, @PathVariable Integer max,
