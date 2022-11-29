@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class RandomNumberController {
 
+
     @Autowired
     private RandomNumberService randomNumberService;
     @Autowired
