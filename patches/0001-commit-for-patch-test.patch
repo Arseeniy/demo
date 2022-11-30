@@ -1,0 +1,24 @@
+From 4aa587b5158bdc2905554cc7c30272cf23373bd1 Mon Sep 17 00:00:00 2001
+From: Arseeniy <123qwe.@gmail.com>
+Date: Wed, 30 Nov 2022 03:44:41 +0400
+Subject: [PATCH] commit for patch test
+
+---
+ .../arseeniy/randomize/controller/RandomNumberController.java    | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java b/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java
+index a2f943c..775ef17 100644
+--- a/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java
++++ b/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java
+@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
+ @RestController
+ public class RandomNumberController {
+ 
++
+     @Autowired
+     private RandomNumberService randomNumberService;
+     @Autowired
+-- 
+2.38.1.windows.1
+

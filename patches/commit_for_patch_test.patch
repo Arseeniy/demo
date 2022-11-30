@@ -1,0 +1,16 @@
+Index: src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java b/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java
+--- a/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java	(revision 2e1edf3b3aa412199de56e737a59bf9eb0d8091d)
++++ b/src/main/java/com/arseeniy/randomize/controller/RandomNumberController.java	(revision 4aa587b5158bdc2905554cc7c30272cf23373bd1)
+@@ -13,6 +13,7 @@
+ @RestController
+ public class RandomNumberController {
+ 
++
+     @Autowired
+     private RandomNumberService randomNumberService;
+     @Autowired
