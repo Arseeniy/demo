@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class RandomNumberController {
+
+
     @Autowired
     private RandomNumberService randomNumberService;
     @Autowired
     private RequestHistoryService requestHistoryService;
-    //changes for third_test_branch СПРОВОЦИРУЕМ КОНФЛИКТ
-    //123123123 СПРОВОЦИРУЕМ КОНФЛИКТ
 
     @GetMapping("/get/random/{min}/{max}/{name}")
     public ResponseEntity getRandomNumber(@PathVariable Integer min, @PathVariable Integer max,
