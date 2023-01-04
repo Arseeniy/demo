@@ -3,7 +3,6 @@ package com.arseeniy.randomize.service.impl;
 import com.arseeniy.randomize.common.RandomNumber;
 import com.arseeniy.randomize.common.RequestHistoryEntity;
 import com.arseeniy.randomize.repository.RequestHistoryRepository;
-import com.arseeniy.randomize.service.RandomNumberService;
 import com.arseeniy.randomize.service.RequestHistoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
